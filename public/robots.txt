@@ -1,0 +1,5 @@
+
+User-Agent: *
+Allow: /
+
+Sitemap: https://medboss.info/public/sitemap.xml

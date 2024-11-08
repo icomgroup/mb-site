@@ -1,0 +1,27 @@
+* {
+  max-width: 100%;
+}
+
+.row {
+  margin-right: calc(0.5 * var(--bs-gutter-x));
+  margin-left: calc(0.5 * var(--bs-gutter-x));
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div:has(.noti-close-btn) {
+  padding-left: 4px !important;
+  margin-left: unset !important;
+  margin-right: auto;
+}
+@media print {
+  body,
+  html {
+    opacity: 0 !important;
+  }
+}

@@ -1,0 +1,56 @@
+// FONTS
+@import "custom/fonts";
+
+//CORE FILES
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "skins/default/variables";
+@import "skins/default/custom-variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// general
+@import "custom/general";
+@import "custom/animations";
+
+// components
+@import "components/page-fallback";
+@import "components/error-page";
+@import "components/hero-title";
+
+@import "components/type";
+@import "components/backgrounds";
+@import "components/reboot";
+@import "components/badge";
+@import "components/list";
+@import "components/card";
+@import "components/accordions";
+@import "components/buttons";
+
+@import "custom/plugins/aos";
+
+// structure
+@import "custom/structure/menu";
+
+// custom components
+@import "custom/components/icons";
+@import "custom/components/avatar";
+@import "custom/components/ribbon";
+
+// pages
+// Home Page
+@import "custom/pages/home/hero";
+@import "custom/pages/home/contact-us";
+@import "custom/pages/home/features";
+@import "custom/pages/home/testimonials";
+@import "custom/pages/home/centers";
+
+// Team Page
+@import "custom/pages/team/index";
+
+// Profile
+@import "custom/profile/navbar";
+@import "custom/profile/notes";
+@import "custom/profile/files";
+
+// Files
+@import "custom/pages/files-details/index.scss";

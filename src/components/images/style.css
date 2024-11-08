@@ -1,0 +1,22 @@
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pulse {
+  object-fit: cover;
+  animation: pulse 3s infinite;
+}
+
+.backend-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,73 @@
+//
+// accordions.scss
+//
+
+.custom-accordionwitharrow {
+  .card {
+    transform: scale(1.03);
+    transition: 0.3s;
+    box-shadow: 1px 1px 3px 0px $primary;
+    + .card {
+      margin-top: 0.5rem;
+    }
+    .card-header {
+      background-color: transparent;
+      position: relative;
+    }
+  }
+  .card:has(.collapsed) {
+    transform: scale(1);
+  }
+
+  .accordion-arrow {
+    position: absolute;
+    left: 1.25rem;
+    transform: rotate(0);
+    transition: 0.5s;
+  }
+
+  .toggler {
+    cursor: pointer;
+    &.collapsed {
+      .accordion-arrow {
+        transform: rotate(-90deg);
+      }
+    }
+    h5 {
+      font-size: 20px;
+      color: $primary;
+    }
+  }
+}
+
+// Custom Accordion
+
+.custom-accordion {
+  .card {
+    overflow: visible;
+    border-color: transparent !important;
+    border-left: 2px dashed $gray-300 !important;
+    box-shadow: none;
+    padding-left: 40px;
+
+    .card-header {
+      border-radius: 7px !important;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 22px;
+        width: 42px;
+        height: 2px;
+        background: $gray-300;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      left: -18px;
+      top: -2px;
+    }
+  }
+}

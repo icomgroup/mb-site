@@ -1,0 +1,9 @@
+.center-item {
+  height: 100%;
+  .address-text,
+  .h5 {
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
+  }
+}

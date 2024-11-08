@@ -1,0 +1,124 @@
+.notes-content {
+  min-height: 60vh;
+}
+// card
+.notes-card {
+  flex-direction: row;
+  padding: 0;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+// sidebar
+.notes_sidebar {
+  min-width: 320px;
+  max-width: 320px;
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.15) -1.95px 0px 2.6px;
+  padding-block: 40px;
+  padding-inline: 20px;
+  max-height: 150vh;
+  overflow: auto;
+  .new-folder-btn {
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .notes_sidebar {
+    right: 0;
+    transform: translateX(-100%);
+    top: 76px;
+    position: fixed;
+    height: calc(100vh - 76px);
+    min-width: 100%;
+    z-index: 1;
+    padding-top: 20px;
+  }
+  .notes_sidebar.active {
+    transform: translateX(0);
+  }
+}
+.sidebar-toggler {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  display: block;
+  // z-index: 10;
+}
+
+.notes_sidebar .sidebar-toggler {
+  position: relative;
+  top: 10px;
+  margin-right: auto;
+  margin-left: -10px;
+}
+
+@media (min-width: 767px) {
+  .sidebar-toggler {
+    display: none !important;
+  }
+}
+
+.note-folder-item {
+  font-size: 15px;
+  .collapse-wrapper {
+    padding-right: 10px;
+    margin-right: 20px;
+    border-right: 1px solid #ddd;
+    .collapse-content {
+      border-radius: 10px;
+      padding: 5px;
+      background-color: #f3f3f3;
+    }
+  }
+}
+
+.note-folder-item div button {
+  color: $primary;
+  font-size: 13px;
+}
+
+.note-folder-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.note-folder-item button {
+  align-items: center;
+  padding: 5px;
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+.note-file-item {
+  font-size: 12px;
+  a {
+    width: 100%;
+    transition: 0.3s;
+    padding: 5px 8px;
+    border-radius: 5px;
+  }
+  a:hover,
+  a.active {
+    background-color: white;
+  }
+}
+
+.note-file-item + .note-file-item {
+  border-top: 1px solid #ddd;
+}
+
+// content
+.notes-content {
+  flex: 1;
+  padding: 15px 15px 50px;
+  position: relative;
+}
+
+.notes-content .del-file-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+}

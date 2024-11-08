@@ -1,0 +1,108 @@
+// hero section
+.hero-section {
+  .hero-left {
+    z-index: 2;
+
+    .hero-description {
+      font-size: 18px;
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .hero-right {
+    .slider-container {
+      position: relative;
+
+      .slider-container-body {
+        position: relative;
+        padding: 0.5rem;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        background: url("/src/assets/images/pattern/dot3.svg");
+        width: 8rem;
+        height: 8rem;
+        position: absolute;
+        top: -3rem;
+        right: 3rem;
+        z-index: 0;
+      }
+    }
+
+    .swiper-slide-content {
+      position: relative;
+
+      .video-overlay {
+        background: rgba($white, 0.05);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+      }
+    }
+
+    .img-container {
+      position: relative;
+      padding: 0.3rem;
+      z-index: 1;
+      background: $white;
+      box-shadow: $box-shadow-lg;
+      border-radius: $border-radius-lg;
+      min-width: 160%;
+      img {
+        min-height: 400px;
+        @media (max-width: 767px) {
+          min-height: 225px;
+        }
+      }
+    }
+    &::before {
+      content: "";
+      background: url("/src/assets/images/pattern/dot2.svg");
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      bottom: -2rem;
+      right: -2rem;
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      background: url("/src/assets/images/pattern/dot5.svg");
+      width: 6rem;
+      height: 6rem;
+      position: absolute;
+      top: -2.5rem;
+      left: -6rem;
+      z-index: 0;
+      transform: rotate(45deg);
+      z-index: 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    .hero-right {
+      .img-container {
+        min-width: 100%;
+      }
+      &::after {
+        right: 2rem;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section a {
+    padding: 7px 10px !important;
+  }
+}
